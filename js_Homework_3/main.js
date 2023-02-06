@@ -52,12 +52,11 @@ while (i < 20) {
 
 let listOfItems = ['html', 'css', 'javascript', 'mysql', 'mongodb', 'react', 'angular', 'node.js'];
 
+document.write('<ul>');
 for (i = 0; i < listOfItems.length; i++) {
     document.write(`<li>${listOfItems[i]}</li>`);
 }
-
-
-
+document.write('</ul>');
 
 
 //     Використовуючи данні з масиву, за допомоги document.write та циклу
@@ -158,26 +157,23 @@ let users = [
     {name: 'max', age: 31, status: true}
 ];
 
+document.write('<h3>користувачі зі статусом true:</h3> <br />');
 for (let user of users) {
     if (user['status'] === true) {
-        console.log(`користувачів зі статусом true: ${user.name} \n`);
+        document.write(`${user.name} <br />`);
     }
 }
-console.log('\n');
 
+document.write('<br /> <h3>користувачі зі статусом false:</h3> <br />');
 for (let user of users) {
     if (user['status'] === false) {
-    console.log(`користувачів зі статусом false: ${user.name} \n`)
+        document.write(`${user.name} <br />`);
     }
 }
-console.log('\n');
 
+document.write('<br /> <h3>користувачі які старші за 30 років:</h3> <br />');
 for (let user of users) {
     if (user['age'] > 30) {
-        console.log(`користувачів які старші за 30 років: ${user.name}`)
+        document.write(`${user.name}: ${user.age} <br />`);
     }
 }
-
-
-
-
