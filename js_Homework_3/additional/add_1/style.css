@@ -1,0 +1,28 @@
+h3 {
+    text-align: center;
+
+    color: grey;
+}
+
+.steps {
+    width: 100%;
+
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.step {
+    width: 10%;
+    max-width: 100px;
+    height: 50px;
+    margin: 4px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #ffffd9;
+    box-shadow: 0 0 3px black;
+
+    border-radius: 3px;
+}

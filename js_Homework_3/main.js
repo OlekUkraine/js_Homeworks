@@ -157,23 +157,23 @@ let users = [
     {name: 'max', age: 31, status: true}
 ];
 
-document.write('<h3>користувачі зі статусом true:</h3> <br />');
+document.write('<h3>користувачі зі статусом true:</h3> ');
 for (let user of users) {
     if (user['status'] === true) {
         document.write(`${user.name} <br />`);
     }
 }
 
-document.write('<br /> <h3>користувачі зі статусом false:</h3> <br />');
+document.write('<br/> <h3>користувачі зі статусом false:</h3> ');
 for (let user of users) {
     if (user['status'] === false) {
         document.write(`${user.name} <br />`);
     }
 }
 
-document.write('<br /> <h3>користувачі які старші за 30 років:</h3> <br />');
+document.write('<br/> <h3>користувачі які старші за 30 років:</h3> ');
 for (let user of users) {
     if (user['age'] > 30) {
-        document.write(`${user.name}: ${user.age} <br />`);
+        document.write(`${user.name}: ${user.age} <br/>`);
     }
 }

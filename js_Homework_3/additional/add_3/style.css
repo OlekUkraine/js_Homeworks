@@ -1,0 +1,32 @@
+.wrap {
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.post-card {
+    width: calc(20% - 8px);
+    margin: 4px;
+    padding: 8px;
+
+    box-sizing: border-box;
+    border-radius: 5px;
+
+    overflow-x: hidden;
+
+    background-color: #f6f6bc;
+    box-shadow: 2px 2px 5px black;
+}
+
+.post-card > p {
+    font-style: italic;
+}
+
+.post-card:hover {
+    margin-left: 6px;
+    margin-right: 2px;
+
+    box-shadow: 0 2px 5px black;
+}
