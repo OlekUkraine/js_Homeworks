@@ -1,29 +1,29 @@
 // - створити функцію яка обчислює та повертає площу прямокутника зі сторонами а і б
-console.log('Площа прямокутника');
+
 function area (a, b) {
     return a * b;
 }
-
+console.log('\n Площа прямокутника:');
 console.log(area(4, 6));
 
 // - створити функцію яка обчислює та повертає площу кола з радіусом r
-console.log('Площа кола');
+
 function areaCircle (r) {
     return Math.PI * (r * r);
 }
-
+console.log('\n Площа кола:');
 console.log(areaCircle(13));
 
 // - створити функцію яка обчислює та повертає площу циліндру висотою h, та радіутом r
-console.log('Площа циліндру');
+
 function areaCylinder (h, r) {
     return 2 * Math.PI * (h + r);
 }
-
+console.log('\n Площа циліндру:');
 console.log(areaCylinder(12, 4));
 
 // - створити функцію яка приймає масив та виводить кожен його елемент
-console.log('Створити функцію яка приймає масив та виводить кожен його елемент')
+
 let coursesTitleArray = [
     'JavaScript Complex',
     'Java Complex',
@@ -37,6 +37,7 @@ function arrayElem (arr) {
         console.log (element);
     }
 }
+console.log('\n Створити функцію яка приймає масив та виводить кожен його елемент:');
 arrayElem(coursesTitleArray);
 
 
@@ -141,10 +142,11 @@ let arrNumber = [
     83,
     69,
     40
-]
+];
 function minNumber (arr) {
     return Math.min(...arr);
 }
+console.log('\n функція яка повертає найменьше число з масиву');
 console.log(minNumber(arrNumber));
 
 // - створити функцію sum(arr)яка приймає масив чисел, сумує значення елементів масиву та повертає його. Приклад sum([1,2,10]) //->13
@@ -155,9 +157,10 @@ function sum (arr) {
     }
     return sumNumbers;
 }
+console.log('\n функція яка приймає масив чисел, сумує значення елементів масиву та повертає його.');
 console.log(sum([1,2,10]));
 
-// - створити функцію swap(arr,index1,index2). Функція міняє місцями значення у відаовідних індексах
+// - створити функцію swap(arr,index1,index2). Функція міняє місцями значення у відповідних індексах
 // Приклад  swap([11,22,33,44],0,1) //=> [22,11,33,44]
 function swap(arr,index1,index2) {
     let num = arr[index1];
@@ -166,6 +169,7 @@ function swap(arr,index1,index2) {
     return arr;
 }
 
+console.log('\n Функція міняє місцями значення у відповідних індексах');
 console.log(swap([11,22,33,44],0,1));
 
 
@@ -179,4 +183,5 @@ function exchange(sumUAH,currencyValues,exchangeCurrency) {
     }
 }
 
+console.log('\n функція обміну валюти');
 console.log(exchange(10000,[{currency:'USD',value:40},{currency:'EUR',value:42},{currency:'PLN',value:8.5}],'PLN'));
