@@ -100,28 +100,15 @@ let users = [
 ];
 function arrObjects(users) {
     document.write('<div class="container">');
-    while (users.length % 4 !== 0) {
-        users.push({name: 'advertising', id: '0000'});
-    }
     for (const user of users) {
-        if (user.name === 'advertising') {
-            document.write(`<ul class="user">
-                           <li><p>'Казино "..уярь <sub>р</sub>усню"'</p></li>
-                           <li><p>Грай та вигравай!!!</p></li>
-                           <li><p>...................</p></li>
-                       </ul>`);
-        }else{
             document.write(`<ul class="user">
                            <li><b>name: </b> <span>${user.name}</span></li>
                            <li><b>id: </b> <span>${user.id}</span></li>
                            <li><b>age: </b> <span>${user.age}</span></li>
                        </ul>`);
-        }
     }
     document.write('</div>');
-
 }
-
 arrObjects(users);
 
 
@@ -144,7 +131,11 @@ let arrNumber = [
     40
 ];
 function minNumber (arr) {
-    return Math.min(...arr);
+    let min = arr[0];
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] < min) min = arr[i];
+    }
+    return min;
 }
 console.log('\n функція яка повертає найменьше число з масиву');
 console.log(minNumber(arrNumber));
