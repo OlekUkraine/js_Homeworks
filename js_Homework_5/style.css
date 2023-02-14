@@ -40,10 +40,16 @@ p {
     line-height: 1.2em;
     text-indent: 1.5em;
 
+    cursor: pointer;
+
     background-color: #e7dede;
     box-shadow: 0 0 8px grey, inset 0 0 3px #d7d7d7;
 
     border-radius: 5px;
+}
+
+.ul > li:hover {
+    transform: scale(101%);
 }
 
 .container {
@@ -71,10 +77,16 @@ p {
     line-height: 1.7em;
     text-indent: 1.5em;
 
+    cursor: pointer;
+
     background-color: #e7dede;
     box-shadow: 0 0 8px grey, inset 0 0 3px #d7d7d7;
 
     border-radius: 5px;
+}
+
+.user:hover {
+    transform: scale(101%);
 }
 
 .user > li > p {
