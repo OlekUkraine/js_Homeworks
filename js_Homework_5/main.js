@@ -1,16 +1,17 @@
 // ВСЕ ЗРОБИТИ СТРІЛОЧНИМИ ФУНКЦІЯМИ!
+const pi = 3.14;
 //     - створити функцію яка обчислює та повертає площу прямокутника зі сторонами а і б
 let area = (a, b) => a * b;
 console.log('Площа прямокутника:');
 console.log(area(4, 6));
 
 // - створити функцію яка обчислює та повертає площу кола з радіусом r
-let areaCircle = (r) => Math.PI * (r * r);
+let areaCircle = (r) => pi * (r * r);
 console.log('\n Площа кола:');
 console.log(areaCircle(21));
 
 // - створити функцію яка обчислює та повертає площу циліндру висотою h, та радіутом r
-let areaCylinder = (h, r) => 2 * Math.PI * (h + r);
+let areaCylinder = (h, r) => 2 * pi * (h + r);
 console.log('\n Площа циліндру:');
 console.log(areaCylinder(85, 33));
 
@@ -25,9 +26,7 @@ let coursesTitleArray = [
 ];
 
 let arrayElem = (arr) => {
-    for (let element of arr) {
-        console.log (element);
-    }
+    for (let element of arr) console.log (element);
 }
 console.log('\n Створити функцію яка приймає масив та виводить кожен його елемент:');
 arrayElem(coursesTitleArray);
@@ -74,13 +73,14 @@ let users = [
     {name: 'petya', age: 30, id: 2},
     {name: 'kolya', age: 29, id: 3},
     {name: 'olya', age: 28, id: 4},
-    {name: 'max', age: 30, id: 5},
-    {name: 'anya', age: 31, id: 6},
-    {name: 'oleg', age: 28, id: 7},
-    {name: 'andrey', age: 29, id: 8},
-    {name: 'masha', age: 30, id: 9},
-    {name: 'olya', age: 31, id: 10},
-    {name: 'max', age: 31, id: 11}
+    {name: 'Robin', age: 232, id: 5},
+    {name: 'max', age: 30, id: 6},
+    {name: 'anya', age: 31, id: 7},
+    {name: 'oleg', age: 28, id: 8},
+    {name: 'andrey', age: 29, id: 9},
+    {name: 'masha', age: 30, id: 0},
+    {name: 'olya', age: 31, id: 11},
+    {name: 'max', age: 31, id: 12}
 ];
 document.write('<h2>Функція яка приймає масив об\'єктів з наступними полями id,name,age , та виводить їх в документ &#9759;</h2>');
 let arrObjects = (arr) => {
@@ -118,8 +118,8 @@ let arrNumber = [
 
 let minNumber = (arr) => {
     let min = arr[0];
-    for (let i = 0; i < arr.length; i++) {
-        if (arr[i] < min) min = arr[i];
+    for (const item of arr) {
+        if (item < min) min = item;
     }
     return min;
 }
@@ -139,6 +139,7 @@ console.log(sum(arrNumber));
 
 // - створити функцію swap(arr,index1,index2). Функція міняє місцями значення у відповідних індексах
 // Приклад  swap([11,22,33,44],0,1) //=> [22,11,33,44]
+let numArr = [11,22,33,44];
 let swap = (arr, index1, index2) => {
     let elem = arr[index1];
     arr[index1] = arr[index2];
@@ -146,7 +147,7 @@ let swap = (arr, index1, index2) => {
     return arr;
 };
 console.log('\n Функція міняє місцями значення у відповідних індексах');
-console.log('\n До: ' + [11,22,33,44] + '\n Після: ' + swap([11,22,33,44],0,1));
+console.log(`\n До: ${numArr} \n Після: ${swap(numArr,0,1)}`);
 
 
 // - Написати функцію обміну валюти exchange(sumUAH,currencyValues,exchangeCurrency)
