@@ -205,7 +205,6 @@ console.log(allClubsCards);
 // }
 
 
-
 // =========================
 //
 //     Взяти описану колоду карт, та за допомоги reduce упакувати всі карти по "мастях" в об'єкт
@@ -234,7 +233,6 @@ const sortCard = playingCards.reduce((accumulator, value) => {
     clubs: []
 })
 console.log(sortCard);
-
 
 
 // =========================
