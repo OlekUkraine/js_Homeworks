@@ -195,7 +195,8 @@ const allClubsCards = [];
 // console.log(allClubsCards);
 function clubsCard (obj) {
     const allClubs = obj.filter(elem => elem.cardSuit === 'clubs');
-    for (let i = 3; i < allClubs.length; i++) allClubsCards.push(allClubs[i]);
+    const index = allClubs.findIndex(obj => obj.value === '9');
+    for (let i = index; i < allClubs.length; i++) allClubsCards.push(allClubs[i]);
     return allClubsCards;
 }
 console.log(clubsCard(playingCards));
