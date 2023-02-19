@@ -29,10 +29,7 @@ console.log(arrStrLow);
 // - Є "брудна" стрінга let str = ' dirty string   ' . Почистити її від зайвих пробілів.
 console.log('\n Є "брудна" стрінга let str = \' dirty string   \' . Почистити її від зайвих пробілів. \n');
 let str = ' dirty string   ';
-let newStr = str
-    .replace(' ', '')
-    .replace('  ', '');
-console.log(newStr);
+console.log(str.trim());
 
 
 // - Напишіть функцію stringToArray(str), яка перетворює рядок на масив слів.
@@ -187,16 +184,21 @@ console.log(allDiamondCards);
 // - всі трефи від 9 та більше
 console.log('\n всі трефи від 9 та більше \n');
 const allClubsCards = [];
-playingCards.forEach(element => {
-    if (element.cardSuit === 'clubs' &&
-        element.value !== '6' &&
-        element.value !== '7' &&
-        element.value !== '8') {
-        allClubsCards.push(element);
-    }
-});
-console.log(allClubsCards);
-
+// playingCards.forEach(element => {
+//      if (element.cardSuit === 'clubs' &&
+//          element.value !== '6' &&
+//          element.value !== '7' &&
+//          element.value !== '8') {
+//          allClubsCards.push(element);
+//     }
+// });
+// console.log(allClubsCards);
+function clubsCard (obj) {
+    const allClubs = obj.filter(elem => elem.cardSuit === 'clubs');
+    for (let i = 3; i < allClubs.length; i++) allClubsCards.push(allClubs[i]);
+    return allClubsCards;
+}
+console.log(clubsCard(playingCards));
 
 // {
 //     cardSuit: '', // 'spade', 'diamond','heart', 'clubs'
@@ -308,19 +310,10 @@ const coursesArray = [
         modules: ['html', 'css', 'js', 'mysql', 'mongodb', 'react', 'angular', 'aws', 'docker', 'git', 'sass']
     }
 ];
-const objWithSass = [];
-coursesArray.forEach(value => {
-    for (const element of value.modules)
-        if (element === 'sass') objWithSass.push(value);
-});
+const objWithSass = coursesArray.filter(value => value.modules.includes('sass'));
 console.log(objWithSass);
 
 // --написати пошук всіх об'єктів, в який в modules є docker
 console.log('\n написати пошук всіх об\'єктів, в який в modules є docker \n');
-const objWithDocker = [];
-
-coursesArray.forEach(value => {
-    for (const element of value.modules)
-        if (element === 'docker') objWithDocker.push(value);
-});
+const objWithDocker = coursesArray.filter(value => value.modules.includes('docker'));
 console.log(objWithDocker);

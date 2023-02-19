@@ -159,7 +159,7 @@ let users = [
 
 document.write('<h3>користувачі зі статусом true:</h3> ');
 for (let user of users) {
-    if (user['status'] === true) {
+    if (user['status']) {
         document.write(`${user.name} <br />`);
     }
 }

@@ -160,3 +160,4 @@ let exchange = (sumUAH, currencyValues,exchangeCurrency) => {
 }
 console.log('\n Функція обміну валюти');
 console.log(exchange(10000,[{currency:'USD',value:40},{currency:'EUR',value:42},{currency: 'PLN',value: 8.5}],'PLN'));
+
