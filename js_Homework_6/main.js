@@ -193,13 +193,11 @@ const allClubsCards = [];
 //     }
 // });
 // console.log(allClubsCards);
-function clubsCard (obj) {
-    const allClubs = obj.filter(elem => elem.cardSuit === 'clubs');
-    const index = allClubs.findIndex(obj => obj.value === '9');
-    for (let i = index; i < allClubs.length; i++) allClubsCards.push(allClubs[i]);
-    return allClubsCards;
-}
-console.log(clubsCard(playingCards));
+
+const allClubs = playingCards
+    .filter(elem => elem.cardSuit === 'clubs')
+    .slice(3);
+console.log(allClubs);
 
 // {
 //     cardSuit: '', // 'spade', 'diamond','heart', 'clubs'
