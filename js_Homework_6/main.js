@@ -119,65 +119,42 @@ console.log(afterMap);
 // =========================
 //     описати колоду карт (від 6 до туза без джокерів)
 console.log('\n описати колоду карт (від 6 до туза без джокерів) \n');
-const playingCards = [
-    {cardSuit: 'heart',value: '6',color:'red'},
-    {cardSuit: 'heart',value: '7',color:'red'},
-    {cardSuit: 'heart',value: '8',color:'red'},
-    {cardSuit: 'heart',value: '9',color:'red'},
-    {cardSuit: 'heart',value: '10',color:'red'},
-    {cardSuit: 'heart',value: 'jack',color:'red'},
-    {cardSuit: 'heart',value: 'queen',color:'red'},
-    {cardSuit: 'heart',value: 'king',color:'red'},
-    {cardSuit: 'heart',value: 'ace',color:'red'},
-    {cardSuit: 'diamond',value: '6',color:'red'},
-    {cardSuit: 'diamond',value: '7',color:'red'},
-    {cardSuit: 'diamond',value: '8',color:'red'},
-    {cardSuit: 'diamond',value: '9',color:'red'},
-    {cardSuit: 'diamond',value: '10',color:'red'},
-    {cardSuit: 'diamond',value: 'jack',color:'red'},
-    {cardSuit: 'diamond',value: 'queen',color:'red'},
-    {cardSuit: 'diamond',value: 'king',color:'red'},
-    {cardSuit: 'diamond',value: 'ace',color:'red'},
-    {cardSuit: 'spade',value: '6',color:'black'},
-    {cardSuit: 'spade',value: '7',color:'black'},
-    {cardSuit: 'spade',value: '8',color:'black'},
-    {cardSuit: 'spade',value: '9',color:'black'},
-    {cardSuit: 'spade',value: '10',color:'black'},
-    {cardSuit: 'spade',value: 'jack',color:'black'},
-    {cardSuit: 'spade',value: 'queen',color:'black'},
-    {cardSuit: 'spade',value: 'king',color:'black'},
-    {cardSuit: 'spade',value: 'ace',color:'black'},
-    {cardSuit: 'clubs',value: '6',color:'black'},
-    {cardSuit: 'clubs',value: '7',color:'black'},
-    {cardSuit: 'clubs',value: '8',color:'black'},
-    {cardSuit: 'clubs',value: '9',color:'black'},
-    {cardSuit: 'clubs',value: '10',color:'black'},
-    {cardSuit: 'clubs',value: 'jack',color:'black'},
-    {cardSuit: 'clubs',value: 'queen',color:'black'},
-    {cardSuit: 'clubs',value: 'king',color:'black'},
-    {cardSuit: 'clubs',value: 'ace',color:'black'},
-];
-console.log(playingCards);
+const playingCardsCet = [];
+const cardSuit = ['spade', 'diamond', 'heart', 'clubs'];
+const value = ['6', '7', '8', '9', '10', 'jack', 'queen', 'king', 'ace'];
+
+function createPlayingCards (suitCard, nameCard) {
+    for (const item of suitCard) {
+        for (let i = 0; i < nameCard.length; i++) {
+            let col;
+            (item === 'diamond' || item === 'heart')? col = 'red':col = 'black';
+            playingCardsCet.push({cardSuit: item, value: nameCard[i], color: col});
+        }
+    }
+}
+createPlayingCards(cardSuit, value);
+
+console.log(playingCardsCet);
 
 // - знайти піковий туз
 console.log('\n знайти піковий туз \n');
-const spadeAce = playingCards.find(element => element.cardSuit === 'spade' && element.value === 'ace');
+const spadeAce = playingCardsCet.find(element => element.cardSuit === 'spade' && element.value === 'ace');
 console.log(spadeAce);
 
 // - всі шістки
 console.log('\n всі шістки \n');
-const allSix = playingCards.filter(element => element.value === '6');
+const allSix = playingCardsCet.filter(element => element.value === '6');
 console.log(allSix);
 
 
 // - всі червоні карти
 console.log('\n всі червоні карти \n');
-const allRedCards = playingCards.filter(element => element.color === 'red');
+const allRedCards = playingCardsCet.filter(element => element.color === 'red');
 console.log(allRedCards);
 
 // - всі буби
 console.log('\n всі буби \n');
-const allDiamondCards = playingCards.filter(element => element.cardSuit === 'diamond');
+const allDiamondCards = playingCardsCet.filter(element => element.cardSuit === 'diamond');
 console.log(allDiamondCards);
 
 
@@ -194,7 +171,7 @@ const allClubsCards = [];
 // });
 // console.log(allClubsCards);
 
-const allClubs = playingCards
+const allClubs = playingCardsCet
     .filter(elem => elem.cardSuit === 'clubs')
     .slice(3);
 console.log(allClubs);
@@ -216,7 +193,7 @@ console.log(allClubs);
 //     clubs:[]
 // }
 console.log('\n Взяти описану колоду карт, та за допомоги reduce упакувати всі карти по "мастях" в об\'єкт \n');
-const sortCard = playingCards.reduce((accumulator, value) => {
+const sortCard = playingCardsCet.reduce((accumulator, value) => {
     if (value.cardSuit === 'spade') {
         accumulator.spades.push(value);
     }else if (value.cardSuit === 'diamond') {
