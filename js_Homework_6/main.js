@@ -193,23 +193,27 @@ console.log(allClubs);
 //     clubs:[]
 // }
 console.log('\n Взяти описану колоду карт, та за допомоги reduce упакувати всі карти по "мастях" в об\'єкт \n');
-const sortCard = playingCardsCet.reduce((accumulator, value) => {
-    if (value.cardSuit === 'spade') {
-        accumulator.spades.push(value);
-    }else if (value.cardSuit === 'diamond') {
-        accumulator.diamonds.push(value);
-    }else if (value.cardSuit === 'heart') {
-        accumulator.hearts.push(value);
-    }else if (value.cardSuit === 'clubs') {
-        accumulator.clubs.push(value);
-    }
-    return accumulator;
+const sortCard = playingCardsCet.reduce((ac, value) => {
+
+    // if (value.cardSuit === 'spade') {
+    //     ac.spades.push(value);
+    // }else if (value.cardSuit === 'diamond') {
+    //     ac.diamonds.push(value);
+    // }else if (value.cardSuit === 'heart') {
+    //     ac.hearts.push(value);
+    // }else if (value.cardSuit === 'clubs') {
+    //     ac.clubs.push(value);
+    // }
+
+    ac[value.cardSuit].push(value);
+
+    return ac;
 }, {
-    spades: [],
-    diamonds: [],
-    hearts: [],
+    spade: [],
+    diamond: [],
+    heart: [],
     clubs: []
-})
+});
 console.log(sortCard);
 
 
