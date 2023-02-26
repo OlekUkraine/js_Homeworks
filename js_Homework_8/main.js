@@ -96,11 +96,9 @@ function Car(model, manufacturer, graduationYear, maxSpeed, engineCapacity) {
         console.log(`їдемо зі швидкістю ${this.maxSpeed} на годину`);
     };
     this.info = function () {
-        console.log(` модель - ${this.model},
-    \n виробник - ${this.manufacturer},
-    \n рік випуску - ${this.graduationYear},
-    \n максимальна швидкість - ${this.maxSpeed},
-    \n об'єм двигуна - ${this.engineCapacity}`);
+        for (let key in this) {
+            console.log(key + ' - ' + this[key]);
+        }
     };
     this.increaseMaxSpeed = function (newSpeed) {
         this.maxSpeed = newSpeed;
@@ -130,11 +128,9 @@ car.drive();
 console.log(`\nДодаєм функцію яка виводить усю інформацію об'єкта\n`);
 
 // Car.prototype.info = function () {
-//     console.log(` модель - ${this.model},
-//     \n виробник - ${this.manufacturer},
-//     \n рік випуску - ${this.graduationYear},
-//     \n максимальна швидкість - ${this.maxSpeed},
-//     \n об'єм двигуна - ${this.engineCapacity}`);
+// for (let key in this) {
+//     console.log(key + ' - ' + this[key]);
+// }
 // }
 car.info();
 
@@ -239,11 +235,9 @@ class InfoCar extends DriveCar {
 
     }
     info () {
-        console.log(` модель - ${this.model},
-        \n виробник - ${this.manufacturer},
-        \n рік випуску - ${this.graduationYear},
-        \n максимальна швидкість - ${this.maxSpeed},
-        \n об'єм двигуна - ${this.engineCapacity}`);
+            for (let key in this) {
+                console.log(key + ' - ' + this[key]);
+            }
     };
 }
 
