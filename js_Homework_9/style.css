@@ -1,0 +1,159 @@
+body {
+    margin: 10px auto;
+    padding: 30px;
+}
+
+
+
+
+/*------------------------------------------------------------------------------------------*/
+.container {
+    width: 80%;
+    margin: 50px auto;
+    padding: 20px;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: flex-start;
+
+    background-color: #e8e5e5;
+}
+
+.column {
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+}
+
+.card {
+    width: calc(30% - 5px);
+    min-width: 310px;
+    max-width: 400px;
+    height: 300px;
+    margin: 5px;
+    padding: 4px;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    column-gap: 4px;
+    row-gap: 4px;
+
+    background-color: #ffffd9;
+
+    border: 1px solid darkgoldenrod;
+    border-radius: 3px;
+    box-shadow: 0 0 3px #6c5410;
+}
+
+.inner {
+    font-weight: 600;
+    text-align: center;
+    overflow-x:hidden;
+
+    background-color: #cdd7e0;
+
+    border: 1px solid darkgoldenrod;
+    box-shadow: 0 0 2px #6c5410;
+}
+
+.inner:nth-child(1) {
+    width: calc(100% - 2px);
+
+    letter-spacing: .2em;
+    font-style: italic;
+
+    border-top-right-radius: 3px;
+    border-top-left-radius: 3px;
+}
+
+.inner:nth-child(2) {
+    width: calc(25% - 2px);
+}
+
+.inner:nth-child(3) {
+    width: calc(74% - 3px);
+}
+
+.inner:nth-child(4) {
+    width: calc(100% - 3px);
+    height: calc(100% - 50px);
+
+    text-align: start;
+
+    background-color: #cdd7e0;
+
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+
+.inner:nth-child(-n+3):hover {
+    background-color: #dbdee5;
+}
+
+ul {
+    margin: 3px;
+    padding: 0;
+
+    text-decoration-style: inherit;
+}
+
+li {
+    margin: 4px;
+    padding-left: 4px;
+
+    display: block;
+
+    background-color: #cdd7e0;
+
+    border: 1px solid darkgoldenrod;
+    box-shadow: 0 0 1px #6c5410;
+}
+
+li:hover {
+    background-color: #dbdee5;
+}
+
+
+/*--------------------------------------------------------------------------------------*/
+
+.pushMy {
+    padding: 10px;
+
+    text-transform: uppercase;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    background-color: #eb9014;
+
+    border: 1px solid red;
+    border-radius: 3px;
+
+    transition: .4s;
+}
+
+.disappearance {
+    transform: scale(0%);
+}
+
+
+/*-------------------------------------------------------------------------------------*/
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/*--------------------------------------------------------------------------------------*/
+
+tr {
+    border: 1px solid darkslateblue;
+}
+
+td {
+    border: 1px solid darkslateblue;
+}
+
