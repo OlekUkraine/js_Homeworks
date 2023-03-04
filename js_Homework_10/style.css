@@ -1,0 +1,190 @@
+
+.sec {
+    margin-bottom: 20px;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center
+}
+
+/* Section-1 */
+.sec:nth-child(1){
+    justify-content: start;
+    flex-direction: row;
+    align-items: center
+}
+
+form {
+    padding: 20px;
+    margin: 5px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+
+    background-color: #fcf1f1;
+
+    border-radius: 3px;
+}
+
+input {
+    margin-bottom: 10px;
+}
+
+button {
+    display: block;
+}
+
+.user {
+    margin: 5px;
+    padding: 10px;
+
+    background-color: #c9c6c6;
+    line-height: 2em;
+
+    border-radius: 3px;
+}
+
+
+/* Section-2 */
+
+.number {
+    padding: 10px;
+
+    font-size: 40px;
+
+    background-color: #f6f6bc;
+
+    border: 1px solid grey;
+    border-radius: 3px;
+}
+
+/* Section-3 */
+
+.sec:nth-child(3) {
+    position: relative;
+}
+
+.box {
+    width: calc(100% - 40px);
+    padding: 10px;
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    row-gap: 4px;
+    column-gap: 4px;
+
+    background-color: #f8f8c0;
+
+    transition: .3s;
+}
+
+.container {
+    width: 200px;
+    height: 120px;
+    padding: 8px;
+
+    line-height: 1.8em;
+
+    background-color: #fdadad;
+    box-shadow: 2px 3px 4px #835353;
+
+    border: 1px solid grey;
+    border-radius: 3px;
+
+    animation: cont alternate .2s;
+}
+
+@keyframes cont {
+    0%{
+        scale: 100%;
+    }
+    50% {
+        scale: 101%;
+    }
+    100%{
+        scale: 99%;
+    }
+}
+
+.btn {
+    padding: 3px;
+    cursor: pointer;
+
+    position: absolute;
+    top: 50%;
+    left: calc(98% - 41px);
+    z-index: 1;
+
+    background-color: rgba(199, 252, 177, 0.38);
+    border: 1px solid rgba(97, 90, 90, 0.4);
+    border-radius: 3px;
+}
+
+.next {
+    left: calc(98% - 41px);
+}
+
+.prev {
+    left: 2%;
+}
+
+.btn:hover {
+    scale: 104%;
+}
+
+.btn:active {
+    scale: 98%;
+}
+
+
+/* Section-4 */
+
+.tab {
+    font-size: 26px;
+    border-collapse: collapse;
+}
+
+tr {
+    border: 1px solid darkslateblue;
+}
+
+td {
+    border: 1px solid darkslateblue;
+}
+
+
+/* Section-5 */
+
+.visited {
+    margin-top: 100px;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    row-gap: 5px;
+    column-gap: 5px;
+}
+
+
+.new-page {
+    padding: 5px;
+
+    font-size: 26px;
+
+    background-color: rgba(248, 237, 209, 0.13);
+
+    border: 3px solid rgba(225, 172, 121, 0.47);
+    border-radius: 4px;
+
+    position: absolute;
+    top: 50px;
+    left: 70%;
+}
+
+.new-page > a {
+    text-decoration: none;
+}
